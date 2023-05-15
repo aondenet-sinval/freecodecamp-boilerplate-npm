@@ -1,6 +1,7 @@
 {
 	"name": "fcc-learn-npm-package-json",
 	"author": "Sinval Gomes dos Santos",
+	"description": "Backend node freecodecamp, treinamento microserviços",
 	"dependencies": {
 		"express": "^4.14.0"
 	},
