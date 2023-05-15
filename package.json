@@ -3,6 +3,7 @@
 	"author": "Sinval Gomes dos Santos",
 	"description": "Backend node freecodecamp, treinamento microserviços",
 	"keywords": ["freecodecamp", "microservices", "nodejs", "express"],
+	"version": "1.0.0",
 	"license": "MIT",
 	"dependencies": {
 		"express": "^4.14.0"
