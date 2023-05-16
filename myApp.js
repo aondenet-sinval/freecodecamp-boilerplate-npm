@@ -1,5 +1,6 @@
 require('dotenv').config()
-let express = require('express');
+const bodyParser = require('body-parser')
+let express = require('express')
 let app = express();
 
 app.use((req, res, next)=>{
@@ -22,7 +23,6 @@ app.get('/json', (req, res)=>{
   }
 })
 
-
 app.get('/now', (req, res, next)=>{
   req.time = new Date().toString()
   next()
@@ -42,7 +42,11 @@ app.get('/name',(req, res)=>{
 	console.log('req.query ', firstName, lastName);
 	res.json({name: `${firstName} ${lastName}`})
 })
-
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+app.post('/name', (req, res)=>{
+  console.log('querystring ', req.querystring);
+})
 
 
 
