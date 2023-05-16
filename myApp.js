@@ -45,8 +45,8 @@ app.get('/name',(req, res)=>{
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 app.post('/name', (req, res)=>{
-  const firstName = req.query.first
-	const lastName = req.query.last
+  const firstName = req.body.first
+	const lastName = req.body.last
 	console.log('req.query ', firstName, lastName);
 	res.json({name: `${firstName} ${lastName}`})
 })
